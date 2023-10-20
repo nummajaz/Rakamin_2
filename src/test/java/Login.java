@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
 
 import javax.swing.*;
 
@@ -31,7 +32,11 @@ public class Login {
         webDriver.findElement(By.xpath("//input[@class= 'shopping_cart_container']")).click();
 
 //        Logout
-//        webDriver.findElement(By.id("react-burger-menu-btn")).click();
-        webDriver.findElement(By.className("bm-burger-button")).click();
+        webDriver.findElement(By.id("react-burger-menu-btn")).click();
+        webDriver.findElement(By.id("logout_sidebar_link")).click();
+
+
+//        Failed Login with empty input
+        webDriver.findElement(By.id("login-button")).click();
     }
 }
